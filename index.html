@@ -38,21 +38,35 @@
 </head>
 <body class="bg-gradient-to-br from-neutral to-blue-50 min-h-screen p-4 md:p-8 font-inter">
   <div class="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden card-shadow">
-    <!-- 头部区域 -->
+    <!-- 头部区域（含公司图标和作者信息） -->
     <div class="bg-gradient-to-r from-primary to-secondary p-6 text-white">
-      <h1 class="text-2xl md:text-3xl font-bold">TOPT染厂水比计算器</h1>
-      <div class="mt-2 text-sm opacity-90">
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center">
+          <!-- 公司图标 -->
+          <img src="logo.png" alt="公司图标" class="h-10 w-10 rounded-lg mr-3">
+          <h1 class="text-2xl md:text-3xl font-bold">TOPT染厂水比计算器</h1>
+        </div>
+      </div>
+      <!-- 作者信息靠右显示 -->
+      <div class="text-sm opacity-90 text-right">
         作者：刘洋 | 部门：CPO
       </div>
     </div>
 
-    <!-- 选择区域 -->
+    <!-- 选择区域（含清空按钮） -->
     <div class="p-6">
       <div class="mb-6">
         <label class="block text-gray-700 mb-3 font-medium text-lg">选择类型</label>
-        <div class="flex flex-wrap gap-4">
-          <button id="btn-fixed" class="px-6 py-3 bg-primary text-white rounded-lg btn-hover">定胚</button>
-          <button id="btn-non-fixed" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all duration-200">非定胚</button>
+        <!-- 定胚/非定胚按钮 + 清空按钮 -->
+        <div class="flex flex-wrap justify-between items-center gap-4">
+          <div class="flex flex-wrap gap-4">
+            <button id="btn-fixed" class="px-6 py-3 bg-primary text-white rounded-lg btn-hover">定胚</button>
+            <button id="btn-non-fixed" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all duration-200">非定胚</button>
+          </div>
+          <!-- 清空按钮（靠右显示） -->
+          <button id="clear-btn" class="px-4 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-200">
+            <i class="fa fa-trash mr-1"></i> 清空
+          </button>
         </div>
       </div>
 
