@@ -146,12 +146,12 @@ function calculateGroup(groupName, quantity) {
   if (group.calcType === 'A') {
     if (isFixed) {
       // 定胚，计算方式A
-      const numerator = q * 0.95 * 2.35 + group.additionalWater;
+      const numerator = q * 0.95 * 2.30 + group.additionalWater;
       const denominator = q * 0.95;
       waterRatio = numerator / denominator;
     } else {
       // 非定胚，计算方式A
-      const numerator = q * 2.35 + group.additionalWater;
+      const numerator = q * 2.30 + group.additionalWater;
       const denominator = q;
       waterRatio = numerator / denominator;
     }
