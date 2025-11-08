@@ -1,0 +1,98 @@
+[
+  {
+    "group": "D6YH",
+    "description": "6管艺煌",
+    "calcType": "A",
+    "additionalWater": 5150.0,
+    "minWater": 0.0,
+    "minWaterRatio": 5.00
+  },
+  {
+    "group": "D4YH",
+    "description": "4管艺煌",
+    "calcType": "A",
+    "additionalWater": 3500.0,
+    "minWater": 0.0,
+    "minWaterRatio": 5.00
+  },
+  {
+    "group": "D2YH",
+    "description": "2管艺煌",
+    "calcType": "A",
+    "additionalWater": 1750.0,
+    "minWater": 0.0,
+    "minWaterRatio": 5.00
+  },
+  {
+    "group": "D1YH",
+    "description": "1管艺煌",
+    "calcType": "A",
+    "additionalWater": 980.0,
+    "minWater": 0.0,
+    "minWaterRatio": 5.00
+  },
+  {
+    "group": "DBYH",
+    "description": "120KG艺煌",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 915.0,
+    "minWaterRatio": 7.00
+  },
+  {
+    "group": "DCYH",
+    "description": "50KG艺煌",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 540.0,
+    "minWaterRatio": 9.00
+  },
+  {
+    "group": "DSYH",
+    "description": "25KG艺煌",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 230.0,
+    "minWaterRatio": 9.00
+  },
+  {
+    "group": "DAST",
+    "description": "4管三技",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 6042.0,
+    "minWaterRatio": 8.00
+  },
+  {
+    "group": "D2ST",
+    "description": "2管三技",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 3021.0,
+    "minWaterRatio": 8.00
+  },
+  {
+    "group": "D1ST",
+    "description": "1管三技",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 1510.5,
+    "minWaterRatio": 8.00
+  },
+  {
+    "group": "DBST",
+    "description": "120KG三技",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 600.0,
+    "minWaterRatio": 9.00
+  },
+  {
+    "group": "DCST",
+    "description": "60KG三技",
+    "calcType": "B",
+    "additionalWater": 0.0,
+    "minWater": 500.0,
+    "minWaterRatio": 9.00
+  }
+]
