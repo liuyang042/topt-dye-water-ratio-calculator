@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOPT染厂水比计算器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#36BFFA',
+            neutral: '#F5F7FA',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .input-focus {
+        @apply focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+      }
+      .card-shadow {
+        @apply shadow-lg shadow-blue-100/30 hover:shadow-xl hover:shadow-blue-100/50 transition-shadow duration-300;
+      }
+      .btn-hover {
+        @apply hover:bg-blue-600 hover:text-white transition-all duration-200;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-neutral to-blue-50 min-h-screen p-4 md:p-8 font-inter">
+  <div class="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden card-shadow">
+    <!-- 头部区域 -->
+    <div class="bg-gradient-to-r from-primary to-secondary p-6 text-white">
+      <h1 class="text-2xl md:text-3xl font-bold">TOPT染厂水比计算器</h1>
+      <div class="mt-2 text-sm opacity-90">
+        作者：刘洋 | 部门：CPO
+      </div>
+    </div>
+
+    <!-- 选择区域 -->
+    <div class="p-6">
+      <div class="mb-6">
+        <label class="block text-gray-700 mb-3 font-medium text-lg">选择类型</label>
+        <div class="flex flex-wrap gap-4">
+          <button id="btn-fixed" class="px-6 py-3 bg-primary text-white rounded-lg btn-hover">定胚</button>
+          <button id="btn-non-fixed" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all duration-200">非定胚</button>
+        </div>
+      </div>
+
+      <!-- 染工作中心组列表 -->
+      <div id="group-list" class="space-y-4">
+        <!-- 动态生成内容 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
