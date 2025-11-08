@@ -56,7 +56,7 @@
     "minWaterRatio": 9.00
   },
   {
-    "group": "DAST",
+    "group": "D4ST",
     "description": "4管三技",
     "calcType": "B",
     "additionalWater": 0.0,
