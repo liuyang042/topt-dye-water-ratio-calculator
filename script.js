@@ -8,6 +8,7 @@ let groups = [];
 // DOM元素
 const btnFixed = document.getElementById('btn-fixed');
 const btnNonFixed = document.getElementById('btn-non-fixed');
+const clearBtn = document.getElementById('clear-btn');
 const groupList = document.getElementById('group-list');
 
 // 初始化
@@ -75,6 +76,18 @@ function bindEvents() {
     btnNonFixed.className = 'px-6 py-3 bg-primary text-white rounded-lg btn-hover';
     btnFixed.className = 'px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all duration-200';
     calculateAll();
+  });
+
+  // 清空按钮事件
+  clearBtn.addEventListener('click', () => {
+    // 清除所有输入框内容
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+      input.value = '';
+    });
+    // 清除所有结果框内容
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+      input.value = '';
+    });
   });
 
   // 输入框变化事件
