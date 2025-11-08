@@ -90,11 +90,35 @@ function bindEvents() {
     });
   });
 
-  // 输入框变化事件
+  // 输入框变化事件（修复手动删除时水比未清除的问题）
   groupList.addEventListener('input', (e) => {
     if (e.target.type === 'number') {
       const groupName = e.target.getAttribute('data-group');
-      calculateGroup(groupName, e.target.value);
+      const value = e.target.value.trim();
+      
+      // 当输入为空时，同步清空水比结果
+      if (value === '') {
+        const resultEl = document.querySelector(`input[data-group="${groupName}"][type="text"]`);
+        if (resultEl) resultEl.value = '';
+        return;
+      }
+      
+      calculateGroup(groupName, value);
+    }
+  });
+
+  // 处理删除键导致的输入框为空情况（额外保障）
+  groupList.addEventListener('keydown', (e) => {
+    if (e.target.type === 'number' && e.key === 'Backspace') {
+      // 延迟检查，确保输入框已更新
+      setTimeout(() => {
+        const groupName = e.target.getAttribute('data-group');
+        const value = e.target.value.trim();
+        if (value === '') {
+          const resultEl = document.querySelector(`input[data-group="${groupName}"][type="text"]`);
+          if (resultEl) resultEl.value = '';
+        }
+      }, 0);
     }
   });
 }
